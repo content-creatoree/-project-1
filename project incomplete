@@ -1,0 +1,351 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPaaFI2bSb5aeOdTZ6p9u00",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/content-creatoree/-project-1/blob/main/project%20incomplete\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 31,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "Z6vlbhBCX1mq",
+        "outputId": "8f424974-f717-4022-a5b7-c524a1a63c77"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "unindent does not match any outer indentation level (<tokenize>, line 18)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<tokenize>\"\u001b[0;36m, line \u001b[0;32m18\u001b[0m\n\u001b[0;31m    elif  guess < number_to_guess :\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unindent does not match any outer indentation level\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "\n",
+        "def guess_the_number():\n",
+        "    print(\"Welcome to 'Guess the Number'!\")\n",
+        "    print(\"I have selected a number between 1 and 100. Can you guess it?\")\n",
+        "\n",
+        "    # Generate a random number between 1 and 100\n",
+        "    number_to_guess = random.randint(1, 100)\n",
+        "    attempts = 0\n",
+        "\n",
+        "    while True:\n",
+        "\n",
+        "            # Get the user's guess\n",
+        "            guess = int(input(\"Enter your guess: \"))\n",
+        "\n",
+        "            if guess < 1 or guess >100 :\n",
+        "             print(\"please enter a number between 1 and 100.\")\n",
+        "      elif  guess < number_to_guess :\n",
+        "                print(\"Too low! Try again.\")\n",
+        "                   print(\"Too high! Try again.\")\n",
+        "            else:\n",
+        "                print(f\"Congratulations! You've guessed the number {number_to_guess} in {attempts} attempts.\")\n",
+        "                break\n",
+        "        except ValueError:\n",
+        "            print(\"That's not a valid number. Please enter a valid integer.\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    guess_the_number()\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def guess_the_number():\n",
+        "    print(\"Welcome to 'Guess the Number'!\")\n",
+        "    print(\"I have selected a number between 1 and 100. Can you guess it?\")\n",
+        "\n",
+        "    # Generate a random number between 1 and 100\n",
+        "    number_to_guess = random.randint(1, 100)\n",
+        "    attempts = 0\n",
+        "\n",
+        "    while True:\n",
+        "        try:\n",
+        "            # Get the user's guess\n",
+        "            guess = int(input(\"Enter your guess: \"))\n",
+        "            attempts += 1\n",
+        "\n",
+        "            if guess < 1 or guess > 100:\n",
+        "                print(\"Please enter a number between 1 and 100.\")\n",
+        "            elif guess < number_to_guess:\n",
+        "                print(\"Too low! Try again.\")\n",
+        "            elif guess > number_to_guess:\n",
+        "                print(\"Too high! Try again.\")\n",
+        "            else:\n",
+        "                print(f\"Congratulations! You've guessed the number {number_to_guess} in {attempts} attempts.\")\n",
+        "                break\n",
+        "        except ValueError:\n",
+        "            print(\"That's not a valid number. Please enter a valid integer.\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    guess_the_number()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0YxYQ5Aif4Dj",
+        "outputId": "5686d0d2-0947-4fc9-e051-c224164d1646"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "metadata": {
+            "tags": null
+          },
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Welcome to 'Guess the Number'!\n",
+            "I have selected a number between 1 and 100. Can you guess it?\n",
+            "Too high! Try again.\n",
+            "Too low! Try again.\n",
+            "Too low! Try again.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def guess_the_number():\n",
+        "    print(\"Welcome to 'Guess the Number'!\")\n",
+        "    print(\"I have selected a number between 1 and 100. Can you guess it?\")\n",
+        "\n",
+        "    # Generate a random number between 1 and 100\n",
+        "    number_to_guess = random.randint(1, 100)\n",
+        "    attempts = 0\n",
+        "\n",
+        "    while True:\n",
+        "        try:\n",
+        "            # Get the user's guess\n",
+        "            guess = int(output(\"Enter your guess: \"))\n",
+        "            attempts += 1\n",
+        "\n",
+        "            if guess < 1 or guess > 100:\n",
+        "                print(\"Please enter a number between 1 and 100.\")\n",
+        "            elif guess < number_to_guess:\n",
+        "                print()\n",
+        "            elif guess > number_to_guess:\n",
+        "                print()\n",
+        "            else:\n",
+        "                print(f\"Congratulations! You've guessed the number {number_to_guess} in {attempts} attempts.\")\n",
+        "                break\n",
+        "        except ValueError:\n",
+        "            print()\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    guess_the_number()\n"
+      ],
+      "metadata": {
+        "id": "tH2Q0bXIgGDq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def guess_the_number():\n",
+        "    print(\"Welcome to 'Guess the Number'!\")\n",
+        "    print(\"I have selected a number between 1 and 100. Can you guess it?\")\n",
+        "\n",
+        "    # Generate a random number between 1 and 100\n",
+        "    number_to_guess = random.randint(1, 100)\n",
+        "    attempts = 0\n",
+        "\n",
+        "    while True:\n",
+        "        try:\n",
+        "            # Get the user's guess\n",
+        "            guess = int(output(\"Enter your guess: \"))\n",
+        "            attempts += 1\n",
+        "\n",
+        "            if guess < 1 or guess > 100:\n",
+        "                print(\"Please enter a number between 1 and 100.\")\n",
+        "            elif guess < number_to_guess:\n",
+        "                print()\n",
+        "            elif guess > number_to_guess:\n",
+        "                print()\n",
+        "            else:\n",
+        "                print(f\"Congratulations! You've guessed the number {number_to_guess} in {attempts} attempts.\")\n",
+        "                break\n",
+        "        except ValueError:\n",
+        "            print()\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    guess_the_number()\n",
+        ""
+      ],
+      "metadata": {
+        "id": "jGTLTqiJgjrO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "def guess_the_number():\n",
+        "  print(\"welcome to guess the number\")\n",
+        "  print(\"i have selected a number between 1 and 100'can you guess the number\")\n",
+        "#  generate a random number between 1 and 100\n",
+        "guess_the_number = random.randint(1 ,100)\n",
+        "attempts = 0\n",
+        "while True :\n",
+        "  try :\n",
+        "   # get the user guess\n",
+        "   guess = int(input(\"enter your guess : \"))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "A8sbGPdhcTQb",
+        "outputId": "bacd798b-1868-4ba4-af46-7a1c3aeb9a56"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "incomplete input (<ipython-input-10-e1007d86bfcb>, line 11)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-10-e1007d86bfcb>\"\u001b[0;36m, line \u001b[0;32m11\u001b[0m\n\u001b[0;31m    guess = int(input(\"enter your guess : \"))\u001b[0m\n\u001b[0m                                             ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m incomplete input\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def guess_the_number():\n",
+        "    print(\"Welcome to 'Guess the Number'!\")\n",
+        "    print(\"I have selected a number between 1 and 100. Can you guess it?\")\n",
+        "\n",
+        "    # Generate a random number between 1 and 100\n",
+        "    number_to_guess = random.randint(1, 100)\n",
+        "    attempts = 0\n",
+        "\n",
+        "    while True:\n",
+        "\n",
+        "            # Get the user's guess\n",
+        "            guess = int(input(\"Enter your guess: \"))\n",
+        "\n",
+        "            if guess < 1 or guess >100\n",
+        "            print(\"please enter a number between 1 and 100\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "wRcdSA64d3D6",
+        "outputId": "7f187b3d-3a4b-44e3-ebc4-c1dc1fcda099"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "expected ':' (<ipython-input-19-8563ee2c293e>, line 16)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-19-8563ee2c293e>\"\u001b[0;36m, line \u001b[0;32m16\u001b[0m\n\u001b[0;31m    if guess < 1 or guess >100\u001b[0m\n\u001b[0m                              ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m expected ':'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "defguess_the_number():\n",
+        "  print(\"welcome to guess the number\")\n",
+        "  print(\"i have selected a number between 140 and 1000' can you guess the number\")\n",
+        "  #generate a random number between 140 and 1000\n",
+        "  guess_the_number = random.randint(140 , 1000)"
+      ],
+      "metadata": {
+        "id": "fw36GOnMajGp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Final work:👇👇👇"
+      ],
+      "metadata": {
+        "id": "ouigNklsamF2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def guess_the_number():\n",
+        "  print(\"welcome to guess the number\")\n",
+        "  print(\"i have selected a number between 1 and 1000' can you guess the number\")\n",
+        "  #generate a random number between 1 and 1000\n",
+        "  guess_the_number = random.randint(1 , 1000)\n",
+        "\n",
+        "  while true :\n",
+        "\n",
+        "    # get the user guess the number\n",
+        "    guess = int(input(\"enter your number : \"))\n",
+        "    if guess < 1 or guess >1000 :\n",
+        "      print(\"please enter a number between 1 and 1000\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "7BlfTkQzZJB-"
+      },
+      "execution_count": 16,
+      "outputs": []
+    }
+  ]
+}
