@@ -1,0 +1,87 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP2eTDEyVo8fqjcfoW0h2Ig",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/content-creatoree/-project-1/blob/main/Untitled28.ipynb%20Mad%20libs%20Python%20Project\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Mad libs Python Project"
+      ],
+      "metadata": {
+        "id": "cY0kAqA45y2E"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def mad_libs():\n",
+        "    print(\"Welcome to Mad Libs! Fill in the blanks below:\")\n",
+        "\n",
+        "    # Getting user inputs\n",
+        "    adjective = input(\"Enter an adjective: \")\n",
+        "    noun = input(\"Enter a noun: \")\n",
+        "    verb = input(\"Enter a verb: \")\n",
+        "    place = input(\"Enter a place: \")\n",
+        "\n",
+        "    # Mad Libs Story\n",
+        "    story = f\"One day, a {adjective} {noun} decided to {verb} at the {place}. \\\n",
+        "Everyone was surprised and started laughing!\"\n",
+        "\n",
+        "    print(\"\\nHere is your Mad Libs story:\\n\")\n",
+        "    print(story)\n",
+        "\n",
+        "# Run the Mad Libs game\n",
+        "mad_libs()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nia5V86B53xS",
+        "outputId": "74d53b0e-9cd1-46f7-c448-2b73bd04ac1e"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to Mad Libs! Fill in the blanks below:\n",
+            "Enter an adjective: silly\n",
+            "Enter a noun: cat\n",
+            "Enter a verb: dance\n",
+            "Enter a place: park\n",
+            "\n",
+            "Here is your Mad Libs story:\n",
+            "\n",
+            "One day, a silly cat decided to dance at the park. Everyone was surprised and started laughing!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
